@@ -3,9 +3,16 @@
 namespace ZnUser\Password\Domain\Interfaces\Services;
 
 use ZnCore\Domain\Exceptions\UnprocessibleEntityException;
+use ZnUser\Password\Domain\Entities\PasswordValidatorEntity;
 
 interface PasswordValidatorServiceInterface
 {
+    /**
+     * Валидация пароля
+     * @param PasswordValidatorEntity $passwordEntity
+     * @throws UnprocessibleEntityException
+     */
+    public function validateEntity(PasswordValidatorEntity $passwordEntity): void;
 
     /**
      * Валидация пароля

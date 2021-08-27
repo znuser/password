@@ -35,4 +35,14 @@ return [
         'handler_method' => 'update',
         'status_id' => 100,
     ],
+    [
+        'method_name' => 'validatePassword.validate',
+        'version' => '1',
+        'is_verify_eds' => false,
+        'is_verify_auth' => false,
+        'permission_name' => SecurityPermissionEnum::VALIDATE_PASSWORD_UPDATE,
+        'handler_class' => \ZnUser\Password\Rpc\Controllers\ValidatePasswordController::class,
+        'handler_method' => 'validate',
+        'status_id' => 100,
+    ],
 ];
