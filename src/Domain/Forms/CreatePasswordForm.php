@@ -82,7 +82,7 @@ class CreatePasswordForm implements ValidateEntityByMetadataInterface, BuildForm
 
     public function setPassword(string $password): void
     {
-        $this->password = $password;
+        $this->password = trim($password);
     }
 
     public function getPasswordConfirm(): string
@@ -92,7 +92,7 @@ class CreatePasswordForm implements ValidateEntityByMetadataInterface, BuildForm
 
     public function setPasswordConfirm(string $passwordConfirm): void
     {
-        $this->passwordConfirm = $passwordConfirm;
+        $this->passwordConfirm = trim($passwordConfirm);
     }
 
     public function getEmail()
@@ -102,6 +102,6 @@ class CreatePasswordForm implements ValidateEntityByMetadataInterface, BuildForm
 
     public function setEmail($email): void
     {
-        $this->email = $email;
+        $this->email = trim($email);
     }
 }

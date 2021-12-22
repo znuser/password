@@ -68,7 +68,7 @@ class UpdatePasswordForm implements ValidateEntityByMetadataInterface, BuildForm
 
     public function setCurrentPassword(?string $currentPassword): void
     {
-        $this->currentPassword = $currentPassword;
+        $this->currentPassword = trim($currentPassword);
     }
 
     public function getNewPassword(): ?string
@@ -78,7 +78,7 @@ class UpdatePasswordForm implements ValidateEntityByMetadataInterface, BuildForm
 
     public function setNewPassword(?string $newPassword): void
     {
-        $this->newPassword = $newPassword;
+        $this->newPassword = trim($newPassword);
     }
 
     public function getNewPasswordConfirm(): ?string
@@ -88,6 +88,6 @@ class UpdatePasswordForm implements ValidateEntityByMetadataInterface, BuildForm
 
     public function setNewPasswordConfirm(?string $newPasswordConfirm): void
     {
-        $this->newPasswordConfirm = $newPasswordConfirm;
+        $this->newPasswordConfirm = trim($newPasswordConfirm);
     }
 }

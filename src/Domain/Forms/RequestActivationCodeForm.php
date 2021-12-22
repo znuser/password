@@ -40,6 +40,6 @@ class RequestActivationCodeForm implements ValidateEntityByMetadataInterface, Bu
 
     public function setEmail($email): void
     {
-        $this->email = $email;
+        $this->email = trim($email);
     }
 }
