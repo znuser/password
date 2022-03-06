@@ -3,12 +3,17 @@
 //use ZnCore\Base\Libs\DotEnv\DotEnv;
 //DotEnv::init();
 
-$container = \Illuminate\Container\Container::getInstance();
-$znCore = new \ZnSandbox\Sandbox\App\Libs\ZnCore($container);
+use ZnSandbox\Sandbox\App\Interfaces\AppInterface;
+use Illuminate\Container\Container;
+use ZnSandbox\Sandbox\App\Libs\ZnCore;
+use ZnTool\Test\Libs\TestApp;
+
+$container = Container::getInstance();
+$znCore = new ZnCore($container);
 $znCore->init();
 
-/** @var \ZnSandbox\Sandbox\App\Interfaces\AppInterface $appFactory */
-$appFactory = $container->get(\ZnTool\Test\Libs\TestApp::class);
+/** @var AppInterface $appFactory */
+$appFactory = $container->get(TestApp::class);
 $appFactory->setBundles([
     new \ZnUser\Password\Bundle(['all']),
 ]);
