@@ -4,7 +4,7 @@ namespace ZnUser\Password\Domain\Repositories\Eloquent;
 
 use Illuminate\Support\Collection;
 use ZnCore\Domain\Libs\Query;
-use ZnLib\Db\Base\BaseEloquentCrudRepository;
+use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 use ZnUser\Password\Domain\Entities\PasswordHistoryEntity;
 use ZnUser\Password\Domain\Interfaces\Repositories\PasswordHistoryRepositoryInterface;
 
