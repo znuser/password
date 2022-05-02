@@ -6,7 +6,7 @@ use ZnUser\Password\Domain\Forms\UpdatePasswordForm;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordServiceInterface;
 use ZnUser\Password\Domain\Interfaces\Services\UpdatePasswordServiceInterface;
 use Symfony\Component\PasswordHasher\PasswordHasherInterface;
-use ZnBundle\User\Domain\Exceptions\UnauthorizedException;
+use ZnCore\Contract\User\Exceptions\UnauthorizedException;
 use ZnBundle\User\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnBundle\User\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnCore\Base\Libs\I18Next\Facades\I18Next;
