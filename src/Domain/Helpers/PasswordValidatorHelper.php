@@ -6,7 +6,7 @@ use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Callback;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;
-use ZnCore\Base\Libs\App\Helpers\ContainerHelper;
+use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
 use ZnCore\Domain\Exceptions\UnprocessibleEntityException;
 
 class PasswordValidatorHelper
