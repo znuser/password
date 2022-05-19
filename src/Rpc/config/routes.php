@@ -14,6 +14,8 @@ return [
         'handler_class' => RestorePasswordController::class,
         'handler_method' => 'requestActivationCode',
         'status_id' => 100,
+        'title' => null,
+        'description' => null,
     ],
     [
         'method_name' => 'restorePassword.createPassword',
@@ -24,6 +26,8 @@ return [
         'handler_class' => RestorePasswordController::class,
         'handler_method' => 'createPassword',
         'status_id' => 100,
+        'title' => null,
+        'description' => null,
     ],
     [
         'method_name' => 'updatePassword.update',
@@ -34,6 +38,8 @@ return [
         'handler_class' => UpdatePasswordController::class,
         'handler_method' => 'update',
         'status_id' => 100,
+        'title' => null,
+        'description' => null,
     ],
     [
         'method_name' => 'validatePassword.validate',
@@ -44,5 +50,7 @@ return [
         'handler_class' => \ZnUser\Password\Rpc\Controllers\ValidatePasswordController::class,
         'handler_method' => 'validate',
         'status_id' => 100,
+        'title' => null,
+        'description' => null,
     ],
 ];
