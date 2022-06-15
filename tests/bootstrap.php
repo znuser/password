@@ -8,7 +8,7 @@ use Illuminate\Container\Container;
 use ZnSandbox\Sandbox\App\Libs\ZnCore;
 use ZnTool\Test\Libs\TestApp;
 
-$container = Container::getInstance();
+$container = new Container();
 $znCore = new ZnCore($container);
 $znCore->init();
 
