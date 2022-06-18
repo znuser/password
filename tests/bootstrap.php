@@ -3,9 +3,9 @@
 //use ZnCore\Base\Libs\DotEnv\DotEnv;
 //DotEnv::init();
 
-use ZnSandbox\Sandbox\App\Interfaces\AppInterface;
+use ZnCore\Base\Libs\App\Interfaces\AppInterface;
 use Illuminate\Container\Container;
-use ZnSandbox\Sandbox\App\Libs\ZnCore;
+use ZnCore\Base\Libs\App\Libs\ZnCore;
 use ZnTool\Test\Libs\TestApp;
 
 $container = new Container();
