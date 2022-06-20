@@ -2,6 +2,7 @@
 
 namespace ZnUser\Password\Domain\Services;
 
+use ZnCore\Domain\Helpers\UnprocessableHelper;
 use ZnUser\Password\Domain\Enums\UserSecurityNotifyTypeEnum;
 use ZnUser\Password\Domain\Forms\CreatePasswordForm;
 use ZnUser\Password\Domain\Forms\RequestActivationCodeForm;
@@ -84,7 +85,7 @@ class RestorePasswordService implements RestorePasswordServiceInterface
         $isVerify = $this->confirmService->isVerify($createPasswordForm->getEmail(), ConfirmActionEnum::RESTORE_PASSWORD, $createPasswordForm->getActivationCode());
         if (!$isVerify) {
             $message = I18Next::t('user', 'registration.invalid_activation_code');
-            ValidationHelper::throwUnprocessable(['activation_code' => $message]);
+            UnprocessableHelper::throwUnprocessableItem('activation_code', $message);
         }
         $this->passwordService->setPassword($createPasswordForm->getPassword(), $identityId);
         $this->confirmService->activate($createPasswordForm->getEmail(), ConfirmActionEnum::RESTORE_PASSWORD, $createPasswordForm->getActivationCode());
