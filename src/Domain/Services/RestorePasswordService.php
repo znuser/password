@@ -85,7 +85,7 @@ class RestorePasswordService implements RestorePasswordServiceInterface
         $isVerify = $this->confirmService->isVerify($createPasswordForm->getEmail(), ConfirmActionEnum::RESTORE_PASSWORD, $createPasswordForm->getActivationCode());
         if (!$isVerify) {
             $message = I18Next::t('user', 'registration.invalid_activation_code');
-            UnprocessableHelper::throwUnprocessableItem('activation_code', $message);
+            UnprocessableHelper::throwItem('activation_code', $message);
         }
         $this->passwordService->setPassword($createPasswordForm->getPassword(), $identityId);
         $this->confirmService->activate($createPasswordForm->getEmail(), ConfirmActionEnum::RESTORE_PASSWORD, $createPasswordForm->getActivationCode());
