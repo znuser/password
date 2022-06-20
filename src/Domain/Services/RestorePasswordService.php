@@ -2,7 +2,7 @@
 
 namespace ZnUser\Password\Domain\Services;
 
-use ZnCore\Domain\Helpers\UnprocessableHelper;
+use ZnCore\Base\Libs\Validation\Helpers\UnprocessableHelper;
 use ZnUser\Password\Domain\Enums\UserSecurityNotifyTypeEnum;
 use ZnUser\Password\Domain\Forms\CreatePasswordForm;
 use ZnUser\Password\Domain\Forms\RequestActivationCodeForm;
@@ -19,8 +19,8 @@ use ZnCore\Base\Enums\Measure\TimeEnum;
 use ZnCore\Base\Exceptions\AlreadyExistsException;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Base\Libs\I18Next\Facades\I18Next;
-use ZnCore\Domain\Exceptions\UnprocessibleEntityException;
-use ZnCore\Domain\Helpers\ValidationHelper;
+use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Base\Libs\Validation\Helpers\ValidationHelper;
 use ZnUser\Notify\Domain\Interfaces\Services\NotifyServiceInterface;
 
 class RestorePasswordService implements RestorePasswordServiceInterface

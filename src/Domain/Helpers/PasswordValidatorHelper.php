@@ -7,7 +7,7 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Callback;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
-use ZnCore\Domain\Exceptions\UnprocessibleEntityException;
+use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
 
 class PasswordValidatorHelper
 {
@@ -20,8 +20,8 @@ class PasswordValidatorHelper
             try {
                 $passwordValidatorService->validate($object);
             } catch (UnprocessibleEntityException $e) {
-                foreach ($e->getErrorCollection() as $validateErrorEntity) {
-                    $context->addViolation($validateErrorEntity->getMessage());
+                foreach ($e->getErrorCollection() as $ValidationErrorEntity) {
+                    $context->addViolation($ValidationErrorEntity->getMessage());
                 }
             }
             return false;

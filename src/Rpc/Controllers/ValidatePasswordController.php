@@ -7,7 +7,7 @@ use ZnUser\Password\Domain\Entities\ValidatorEntity;
 use ZnUser\Password\Domain\Forms\UpdatePasswordForm;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface;
 use ZnUser\Password\Domain\Interfaces\Services\UpdatePasswordServiceInterface;
-use ZnCore\Domain\Helpers\EntityHelper;
+use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
 use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
 use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
 

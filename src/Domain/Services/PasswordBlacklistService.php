@@ -3,7 +3,7 @@
 namespace ZnUser\Password\Domain\Services;
 
 use ZnUser\Password\Domain\Interfaces\Services\PasswordBlacklistServiceInterface;
-use ZnCore\Domain\Interfaces\Libs\EntityManagerInterface;
+use ZnCore\Base\Libs\EntityManager\Interfaces\EntityManagerInterface;
 use ZnCore\Domain\Base\BaseCrudService;
 use ZnUser\Password\Domain\Entities\PasswordBlacklistEntity;
 

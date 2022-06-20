@@ -5,8 +5,8 @@ namespace ZnUser\Password\Tests\Unit;
 use ZnCore\Base\Libs\I18Next\Facades\I18Next;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface;
 use ZnCore\Base\Helpers\ClassHelper;
-use ZnCore\Domain\Exceptions\UnprocessibleEntityException;
-use ZnCore\Domain\Helpers\ValidationHelper;
+use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Base\Libs\Validation\Helpers\ValidationHelper;
 use ZnTool\Test\Base\BaseTest;
 
 include_once __DIR__ . '/../bootstrap.php';

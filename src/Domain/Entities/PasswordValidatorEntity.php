@@ -4,9 +4,9 @@ namespace ZnUser\Password\Domain\Entities;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
-use ZnCore\Base\Libs\Entity\Interfaces\ValidateEntityByMetadataInterface;
+use ZnCore\Base\Libs\Validation\Interfaces\ValidationByMetadataInterface;
 
-class PasswordValidatorEntity implements ValidateEntityByMetadataInterface
+class PasswordValidatorEntity implements ValidationByMetadataInterface
 {
 
     private $password = null;
