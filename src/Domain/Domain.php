@@ -2,7 +2,7 @@
 
 namespace ZnUser\Password\Domain;
 
-use ZnCore\Base\Libs\Domain\Interfaces\DomainInterface;
+use ZnCore\Domain\Domain\Interfaces\DomainInterface;
 
 class Domain implements DomainInterface
 {

@@ -3,7 +3,7 @@
 namespace ZnUser\Password\Domain\Repositories\Eloquent;
 
 use Illuminate\Support\Collection;
-use ZnCore\Base\Libs\Query\Entities\Query;
+use ZnCore\Domain\Query\Entities\Query;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 use ZnUser\Password\Domain\Entities\PasswordHistoryEntity;
 use ZnUser\Password\Domain\Interfaces\Repositories\PasswordHistoryRepositoryInterface;

@@ -12,9 +12,9 @@ use Symfony\Component\PasswordHasher\PasswordHasherInterface;
 use ZnBundle\User\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnCore\Base\Libs\EventDispatcher\Traits\EventDispatcherTrait;
 use ZnCore\Base\Libs\I18Next\Facades\I18Next;
-use ZnCore\Base\Libs\Service\Base\BaseService;
+use ZnCore\Domain\Service\Base\BaseService;
 use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
-use ZnCore\Base\Libs\EntityManager\Interfaces\EntityManagerInterface;
+use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
 
 class PasswordService extends BaseService implements PasswordServiceInterface
 {
