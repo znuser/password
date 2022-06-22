@@ -3,6 +3,7 @@
 namespace ZnUser\Password\Tests\Unit;
 
 use ZnCore\Base\Libs\I18Next\Facades\I18Next;
+use ZnCore\Base\Libs\Validation\Helpers\ErrorCollectionHelper;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface;
 use ZnCore\Base\Helpers\ClassHelper;
 use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
@@ -165,7 +166,7 @@ final class PasswordValidatorServiceTest extends BaseTest
             $passwordValidatorService->validate($password);
             $this->assertFalse(true);
         } catch (UnprocessibleEntityException $exception) {
-            $errorData = ValidationHelper::collectionToArray($exception->getErrorCollection());
+            $errorData = ErrorCollectionHelper::collectionToArray($exception->getErrorCollection());
             $this->assertEquals($expected, $errorData);
         }
     }
