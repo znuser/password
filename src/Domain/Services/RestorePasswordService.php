@@ -15,7 +15,7 @@ use ZnBundle\User\Domain\Enums\ConfirmActionEnum;
 use ZnBundle\User\Domain\Enums\CredentialTypeEnum;
 use ZnBundle\User\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnBundle\User\Domain\Interfaces\Services\ConfirmServiceInterface;
-use ZnCore\Base\Measure\Enums\TimeEnum;
+use ZnCore\Base\Time\Enums\TimeEnum;
 use ZnCore\Domain\Entity\Exceptions\AlreadyExistsException;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 use ZnCore\Base\I18Next\Facades\I18Next;
