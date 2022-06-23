@@ -1,11 +1,11 @@
 <?php
 
-//use ZnCore\Base\Libs\DotEnv\Domain\Libs\DotEnv;
+//use ZnCore\Base\DotEnv\Domain\Libs\DotEnv;
 //DotEnv::init();
 
-use ZnCore\Base\Libs\App\Interfaces\AppInterface;
+use ZnCore\Base\App\Interfaces\AppInterface;
 use Illuminate\Container\Container;
-use ZnCore\Base\Libs\App\Libs\ZnCore;
+use ZnCore\Base\App\Libs\ZnCore;
 use ZnTool\Test\Libs\TestApp;
 
 $container = new Container();

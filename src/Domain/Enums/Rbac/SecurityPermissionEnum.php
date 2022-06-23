@@ -2,7 +2,7 @@
 
 namespace ZnUser\Password\Domain\Enums\Rbac;
 
-use ZnCore\Base\Libs\Enum\Interfaces\GetLabelsInterface;
+use ZnCore\Base\Enum\Interfaces\GetLabelsInterface;
 
 class SecurityPermissionEnum implements GetLabelsInterface
 {

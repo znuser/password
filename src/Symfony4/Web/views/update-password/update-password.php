@@ -7,7 +7,7 @@
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
-use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
+use ZnCore\Base\Container\Helpers\ContainerHelper;
 use ZnLib\Web\Symfony4\MicroApp\Libs\FormRender;
 
 /** @var CsrfTokenManagerInterface $tokenManager */
@@ -17,7 +17,7 @@ $formRender->addFormOption('autocomplete', 'off');
 
 ?>
 
-<h2><?= \ZnCore\Base\Libs\I18Next\Facades\I18Next::t('user_security', 'change-password.action.update_password') ?></h2>
+<h2><?= \ZnCore\Base\I18Next\Facades\I18Next::t('user_security', 'change-password.action.update_password') ?></h2>
 
 <?= $formRender->errors() ?>
 

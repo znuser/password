@@ -9,9 +9,9 @@ use Symfony\Component\PasswordHasher\PasswordHasherInterface;
 use ZnCore\Contract\User\Exceptions\UnauthorizedException;
 use ZnBundle\User\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnBundle\User\Domain\Interfaces\Services\AuthServiceInterface;
-use ZnCore\Base\Libs\I18Next\Facades\I18Next;
-use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
-use ZnCore\Base\Libs\Validation\Helpers\ValidationHelper;
+use ZnCore\Base\I18Next\Facades\I18Next;
+use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Base\Validation\Helpers\ValidationHelper;
 
 class UpdatePasswordService implements UpdatePasswordServiceInterface
 {
