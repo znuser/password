@@ -2,7 +2,7 @@
 
 namespace ZnUser\Password\Tests\Unit;
 
-use ZnCore\Base\I18Next\Facades\I18Next;
+use ZnLib\Components\I18Next\Facades\I18Next;
 use ZnCore\Base\Validation\Helpers\ErrorCollectionHelper;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface;
 use ZnCore\Base\Instance\Helpers\ClassHelper;

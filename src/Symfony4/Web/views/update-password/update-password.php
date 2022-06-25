@@ -17,7 +17,7 @@ $formRender->addFormOption('autocomplete', 'off');
 
 ?>
 
-<h2><?= \ZnCore\Base\I18Next\Facades\I18Next::t('user_security', 'change-password.action.update_password') ?></h2>
+<h2><?= \ZnLib\Components\I18Next\Facades\I18Next::t('user_security', 'change-password.action.update_password') ?></h2>
 
 <?= $formRender->errors() ?>
 
