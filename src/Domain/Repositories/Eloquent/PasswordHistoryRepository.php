@@ -25,6 +25,6 @@ class PasswordHistoryRepository extends BaseEloquentCrudRepository implements Pa
     {
         $query = new Query();
         $query->where('identity_id', $identityId);
-        return $this->all($query);
+        return $this->findAll($query);
     }
 }
