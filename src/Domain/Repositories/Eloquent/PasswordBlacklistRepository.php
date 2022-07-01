@@ -26,7 +26,7 @@ class PasswordBlacklistRepository extends BaseEloquentCrudRepository implements 
         $query = new Query();
         $query->where('password', $password);
         try {
-            $this->one($query);
+            $this->findOne($query);
             return true;
         } catch (NotFoundException $e) {
             return false;
