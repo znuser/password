@@ -54,7 +54,7 @@ class RestorePasswordService implements RestorePasswordServiceInterface
     {
         ValidationHelper::validateEntity($requestActivationCodeForm);
         try {
-            $credentialEntity = $this->credentialRepository->oneByCredential($requestActivationCodeForm->getEmail(), CredentialTypeEnum::EMAIL);
+            $credentialEntity = $this->credentialRepository->findOneByCredential($requestActivationCodeForm->getEmail(), CredentialTypeEnum::EMAIL);
         } catch (NotFoundException $e) {
             $exception = new UnprocessibleEntityException();
             $exception->add('email', I18Next::t('core', 'message.not_found'));
@@ -99,7 +99,7 @@ class RestorePasswordService implements RestorePasswordServiceInterface
     private function identityIdByCredential(string $credential): int
     {
         try {
-            $credentialEntity = $this->credentialRepository->oneByCredential($credential, CredentialTypeEnum::EMAIL);
+            $credentialEntity = $this->credentialRepository->findOneByCredential($credential, CredentialTypeEnum::EMAIL);
             return $credentialEntity->getIdentityId();
         } catch (NotFoundException $e) {
             $exception = new UnprocessibleEntityException();
