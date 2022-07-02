@@ -41,7 +41,7 @@ class CreatePasswordForm implements ValidationByMetadataInterface, BuildFormInte
         $metadata->addPropertyConstraint('passwordConfirm', new Assert\NotBlank);
         $metadata->addPropertyConstraint('passwordConfirm', new Assert\EqualTo([
             'propertyPath' => 'password',
-            'message' => I18Next::t('user_security', 'change-password.message.does_not_match_the_new_password'),
+            'message' => I18Next::t('user.password', 'change-password.message.does_not_match_the_new_password'),
         ]));
     }
 
@@ -52,13 +52,13 @@ class CreatePasswordForm implements ValidationByMetadataInterface, BuildFormInte
                 'label' => 'Email'
             ])
             ->add('activationCode', TextType::class, [
-                'label' => I18Next::t('user_security', 'restore-password.attribute.activationCode')
+                'label' => I18Next::t('user.password', 'restore-password.attribute.activationCode')
             ])
             ->add('password', PasswordType::class, [
-                'label' => I18Next::t('user_security', 'restore-password.attribute.password')
+                'label' => I18Next::t('user.password', 'restore-password.attribute.password')
             ])
             ->add('passwordConfirm', PasswordType::class, [
-                'label' => I18Next::t('user_security', 'restore-password.attribute.passwordConfirm')
+                'label' => I18Next::t('user.password', 'restore-password.attribute.passwordConfirm')
             ])
             ->add('save', SubmitType::class, [
                 'label' => I18Next::t('core', 'action.send')

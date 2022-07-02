@@ -64,7 +64,7 @@ class UpdatePasswordController extends BaseWebController implements ControllerAc
         if ($buildForm->isSubmitted() && $buildForm->isValid()) {
             try {
                 $this->service->update($form);
-                $this->toastrService->success(['user_security', 'restore-password.message.create_password_success']);
+                $this->toastrService->success(['user.password', 'restore-password.message.create_password_success']);
                 return $this->redirectToHome();
             } catch (UnprocessibleEntityException $e) {
                 $this->setUnprocessableErrorsToForm($buildForm, $e);

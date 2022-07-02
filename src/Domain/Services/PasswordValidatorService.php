@@ -135,7 +135,7 @@ class PasswordValidatorService extends BaseService implements PasswordValidatorS
         $uniqueCount = count($charRate);
         $uniqueRate = $uniqueCount / mb_strlen($password);
         if($uniqueRate < 0.5) {
-            $this->showError(I18Next::t('user_security', 'password.message.password_unique_chars'));
+            $this->showError(I18Next::t('user.password', 'password.message.password_unique_chars'));
         }
     }
 
@@ -148,7 +148,7 @@ class PasswordValidatorService extends BaseService implements PasswordValidatorS
     private function checkBlacklist(string $password): void {
         $isHas = $this->blacklistService->isHas($password);
         if($isHas) {
-            $this->showError(I18Next::t('user_security', 'password.message.password_found_in_blacklist'));
+            $this->showError(I18Next::t('user.password', 'password.message.password_found_in_blacklist'));
         }
     }
 
@@ -179,25 +179,25 @@ class PasswordValidatorService extends BaseService implements PasswordValidatorS
         $expContent = '';
         if ($this->lowerCaseRequired) {
             $expContent .= '(?=.*[a-z])';
-            $requiredMessage[] = I18Next::t('user_security', 'password.required.lower');
+            $requiredMessage[] = I18Next::t('user.password', 'password.required.lower');
         }
         if ($this->upperCaseRequired) {
             $expContent .= '(?=.*[A-Z])';
-            $requiredMessage[] = I18Next::t('user_security', 'password.required.upper');
+            $requiredMessage[] = I18Next::t('user.password', 'password.required.upper');
         }
         if ($this->numericRequired) {
             $expContent .= '(?=.*\d)';
-            $requiredMessage[] = I18Next::t('user_security', 'password.required.numeric');
+            $requiredMessage[] = I18Next::t('user.password', 'password.required.numeric');
         }
         if ($this->specialCharRequired) {
             $specCharsExp = preg_quote("[$&+,:;=?@#|'<>.-^*()%!\"'_\\]");
             $expContent .= '(?=.*['.$specCharsExp.']+)';
-            $requiredMessage[] = I18Next::t('user_security', 'password.required.special_char');
+            $requiredMessage[] = I18Next::t('user.password', 'password.required.special_char');
         }
         $exp = '/^' . $expContent . '.*$/';
         return new Assert\Regex([
             'pattern' => $exp,
-            'message' => I18Next::t('user_security', 'password.message.password_must_contain_characters') . implode(', ', $requiredMessage),
+            'message' => I18Next::t('user.password', 'password.message.password_must_contain_characters') . implode(', ', $requiredMessage),
         ]);
     }
 }

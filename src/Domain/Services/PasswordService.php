@@ -82,7 +82,7 @@ class PasswordService extends BaseService implements PasswordServiceInterface
         $isHasPassword = $this->passwordHistoryService->isHas($newPassword, $identityId);
         if ($isHasPassword) {
             $exception = new UnprocessibleEntityException();
-            $exception->add('newPassword', I18Next::t('user_security', 'change-password.message.password_exists_in_history'));
+            $exception->add('newPassword', I18Next::t('user.password', 'change-password.message.password_exists_in_history'));
             throw $exception;
         }
     }

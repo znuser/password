@@ -35,12 +35,12 @@ class UpdatePasswordForm implements ValidationByMetadataInterface, BuildFormInte
         $metadata->addPropertyConstraint('newPasswordConfirm', new Assert\NotBlank);
         $metadata->addPropertyConstraint('newPasswordConfirm', new Assert\EqualTo([
             'propertyPath' => 'newPassword',
-            'message' => I18Next::t('user_security', 'change-password.message.does_not_match_the_new_password'),
+            'message' => I18Next::t('user.password', 'change-password.message.does_not_match_the_new_password'),
         ]));
 
         $metadata->addPropertyConstraint('newPassword', new Assert\NotEqualTo([
             'propertyPath' => 'currentPassword',
-            'message' => I18Next::t('user_security', 'change-password.message.does_match_the_new_password'),
+            'message' => I18Next::t('user.password', 'change-password.message.does_match_the_new_password'),
         ]));
     }
 
@@ -48,13 +48,13 @@ class UpdatePasswordForm implements ValidationByMetadataInterface, BuildFormInte
     {
         $formBuilder
             ->add('currentPassword', PasswordType::class, [
-                'label' => I18Next::t('user_security', 'change-password.attribute.old_password')
+                'label' => I18Next::t('user.password', 'change-password.attribute.old_password')
             ])
             ->add('newPassword', PasswordType::class, [
-                'label' => I18Next::t('user_security', 'change-password.attribute.new_password')
+                'label' => I18Next::t('user.password', 'change-password.attribute.new_password')
             ])
             ->add('newPasswordConfirm', PasswordType::class, [
-                'label' => I18Next::t('user_security', 'change-password.attribute.new_password_repeat')
+                'label' => I18Next::t('user.password', 'change-password.attribute.new_password_repeat')
             ])
             ->add('save', SubmitType::class, [
                 'label' => I18Next::t('core', 'action.send')

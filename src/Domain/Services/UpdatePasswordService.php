@@ -56,7 +56,7 @@ class UpdatePasswordService implements UpdatePasswordServiceInterface
         $isValidCurrentPassword = $this->passwordHasher->verify($entity->getValidation(), $currentPassword);
         if (!$isValidCurrentPassword) {
             $exception = new UnprocessibleEntityException();
-            $exception->add('currentPassword', I18Next::t('user_security', 'change-password.message.does_not_match_the_current_password'));
+            $exception->add('currentPassword', I18Next::t('user.password', 'change-password.message.does_not_match_the_current_password'));
             throw $exception;
         }
     }

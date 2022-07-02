@@ -10,7 +10,7 @@ class Bundle extends BaseBundle
     public function i18next(): array
     {
         return [
-            'user_security' => 'vendor/znuser/password/src/Domain/i18next/__lng__/__ns__.json',
+            'user.password' => 'vendor/znuser/password/src/Domain/i18next/__lng__/__ns__.json',
         ];
     }
 
