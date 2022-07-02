@@ -5,7 +5,7 @@ namespace ZnUser\Password\Domain\Services;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordHistoryServiceInterface;
 use ZnUser\Password\Domain\Enums\UserActionEnum;
 use ZnUser\Password\Domain\Enums\UserActionEventEnum;
-use ZnBundle\User\Domain\Events\UserActionEvent;
+use ZnUser\Identity\Domain\Events\UserActionEvent;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordServiceInterface;
 use ZnUser\Password\Domain\Subscribers\SendNotifyAfterUpdatePasswordSubscriber;
 use Symfony\Component\PasswordHasher\PasswordHasherInterface;
