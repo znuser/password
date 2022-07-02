@@ -9,7 +9,7 @@ use ZnBundle\User\Domain\Events\UserActionEvent;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordServiceInterface;
 use ZnUser\Password\Domain\Subscribers\SendNotifyAfterUpdatePasswordSubscriber;
 use Symfony\Component\PasswordHasher\PasswordHasherInterface;
-use ZnBundle\User\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
+use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnCore\Base\EventDispatcher\Traits\EventDispatcherTrait;
 use ZnLib\Components\I18Next\Facades\I18Next;
 use ZnCore\Domain\Service\Base\BaseService;

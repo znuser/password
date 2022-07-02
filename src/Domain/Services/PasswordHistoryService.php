@@ -6,7 +6,7 @@ use ZnUser\Password\Domain\Entities\PasswordHistoryEntity;
 use ZnUser\Password\Domain\Interfaces\Repositories\PasswordHistoryRepositoryInterface;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordHistoryServiceInterface;
 use Symfony\Component\PasswordHasher\PasswordHasherInterface;
-use ZnBundle\User\Domain\Interfaces\Services\AuthServiceInterface;
+use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnCore\Domain\Service\Base\BaseCrudService;
 use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
 
