@@ -4,7 +4,7 @@
 //DotEnv::init();
 
 use ZnCore\Base\App\Interfaces\AppInterface;
-use Illuminate\Container\Container;
+use ZnCore\Base\Container\Libs\Container;
 use ZnCore\Base\App\Libs\ZnCore;
 use ZnTool\Test\Libs\TestApp;
 
