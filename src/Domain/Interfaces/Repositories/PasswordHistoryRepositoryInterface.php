@@ -3,7 +3,7 @@
 namespace ZnUser\Password\Domain\Interfaces\Repositories;
 
 use ZnUser\Password\Domain\Entities\PasswordHistoryEntity;
-use Illuminate\Support\Collection;
+use ZnCore\Domain\Collection\Libs\Collection;
 use ZnCore\Domain\Repository\Interfaces\CrudRepositoryInterface;
 
 interface PasswordHistoryRepositoryInterface extends CrudRepositoryInterface
