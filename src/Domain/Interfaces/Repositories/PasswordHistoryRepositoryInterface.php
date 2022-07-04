@@ -11,7 +11,7 @@ interface PasswordHistoryRepositoryInterface extends CrudRepositoryInterface
 
     /**
      * @param int $identityId
-     * @return Collection | PasswordHistoryEntity[]
+     * @return \ZnCore\Domain\Collection\Interfaces\Enumerable | PasswordHistoryEntity[]
      */
     public function allByIdentityId(int $identityId): Collection;
 }
