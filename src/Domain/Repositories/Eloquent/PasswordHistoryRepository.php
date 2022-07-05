@@ -2,6 +2,7 @@
 
 namespace ZnUser\Password\Domain\Repositories\Eloquent;
 
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use ZnCore\Domain\Collection\Libs\Collection;
 use ZnCore\Domain\Query\Entities\Query;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
@@ -21,7 +22,7 @@ class PasswordHistoryRepository extends BaseEloquentCrudRepository implements Pa
         return PasswordHistoryEntity::class;
     }
 
-    public function allByIdentityId(int $identityId): Collection
+    public function allByIdentityId(int $identityId): Enumerable
     {
         $query = new Query();
         $query->where('identity_id', $identityId);
