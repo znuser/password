@@ -3,7 +3,6 @@
 namespace ZnUser\Password\Domain\Repositories\Eloquent;
 
 use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use ZnCore\Domain\Collection\Libs\Collection;
 use ZnCore\Domain\Query\Entities\Query;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 use ZnUser\Password\Domain\Entities\PasswordHistoryEntity;
@@ -12,12 +11,12 @@ use ZnUser\Password\Domain\Interfaces\Repositories\PasswordHistoryRepositoryInte
 class PasswordHistoryRepository extends BaseEloquentCrudRepository implements PasswordHistoryRepositoryInterface
 {
 
-    public function tableName() : string
+    public function tableName(): string
     {
         return 'security_password_history';
     }
 
-    public function getEntityClass() : string
+    public function getEntityClass(): string
     {
         return PasswordHistoryEntity::class;
     }

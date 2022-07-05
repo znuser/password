@@ -3,9 +3,8 @@
 namespace ZnUser\Password\Domain\Interfaces\Repositories;
 
 use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use ZnUser\Password\Domain\Entities\PasswordHistoryEntity;
-use ZnCore\Domain\Collection\Libs\Collection;
 use ZnCore\Domain\Repository\Interfaces\CrudRepositoryInterface;
+use ZnUser\Password\Domain\Entities\PasswordHistoryEntity;
 
 interface PasswordHistoryRepositoryInterface extends CrudRepositoryInterface
 {
