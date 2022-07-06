@@ -2,7 +2,7 @@
 
 namespace ZnUser\Password;
 
-use ZnCore\Base\Bundle\Base\BaseBundle;
+use ZnCore\Bundle\Base\BaseBundle;
 
 class Bundle extends BaseBundle
 {

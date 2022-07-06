@@ -12,7 +12,7 @@ use Symfony\Component\PasswordHasher\PasswordHasherInterface;
 use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnCore\EventDispatcher\Traits\EventDispatcherTrait;
 use ZnLib\Components\I18Next\Facades\I18Next;
-use ZnCore\Domain\Service\Base\BaseService;
+use ZnCore\Service\Base\BaseService;
 use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
 use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
 

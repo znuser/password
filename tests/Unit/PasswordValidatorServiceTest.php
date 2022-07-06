@@ -5,7 +5,7 @@ namespace ZnUser\Password\Tests\Unit;
 use ZnLib\Components\I18Next\Facades\I18Next;
 use ZnCore\Validation\Helpers\ErrorCollectionHelper;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface;
-use ZnCore\Base\Instance\Helpers\ClassHelper;
+use ZnCore\Instance\Helpers\ClassHelper;
 use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
 use ZnCore\Validation\Helpers\ValidationHelper;
 use ZnTool\Test\Base\BaseTest;
