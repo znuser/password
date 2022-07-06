@@ -10,11 +10,11 @@ use ZnUser\Password\Domain\Interfaces\Services\PasswordServiceInterface;
 use ZnUser\Password\Domain\Subscribers\SendNotifyAfterUpdatePasswordSubscriber;
 use Symfony\Component\PasswordHasher\PasswordHasherInterface;
 use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
-use ZnCore\Base\EventDispatcher\Traits\EventDispatcherTrait;
+use ZnCore\EventDispatcher\Traits\EventDispatcherTrait;
 use ZnLib\Components\I18Next\Facades\I18Next;
 use ZnCore\Domain\Service\Base\BaseService;
-use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
-use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
+use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
 
 class PasswordService extends BaseService implements PasswordServiceInterface
 {

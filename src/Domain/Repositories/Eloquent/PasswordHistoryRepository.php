@@ -2,7 +2,7 @@
 
 namespace ZnUser\Password\Domain\Repositories\Eloquent;
 
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
+use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Domain\Query\Entities\Query;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 use ZnUser\Password\Domain\Entities\PasswordHistoryEntity;

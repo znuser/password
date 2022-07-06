@@ -4,7 +4,7 @@ namespace ZnUser\Password\Rpc\Controllers;
 
 use ZnUser\Password\Domain\Forms\UpdatePasswordForm;
 use ZnUser\Password\Domain\Interfaces\Services\UpdatePasswordServiceInterface;
-use ZnCore\Domain\Entity\Helpers\EntityHelper;
+use ZnCore\Entity\Helpers\EntityHelper;
 use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
 use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
 

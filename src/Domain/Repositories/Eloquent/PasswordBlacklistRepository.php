@@ -2,7 +2,7 @@
 
 namespace ZnUser\Password\Domain\Repositories\Eloquent;
 
-use ZnCore\Domain\Entity\Exceptions\NotFoundException;
+use ZnCore\Entity\Exceptions\NotFoundException;
 use ZnCore\Domain\Query\Entities\Query;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 use ZnUser\Password\Domain\Entities\PasswordBlacklistEntity;

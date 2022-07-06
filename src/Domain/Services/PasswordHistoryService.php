@@ -8,7 +8,7 @@ use ZnUser\Password\Domain\Interfaces\Services\PasswordHistoryServiceInterface;
 use Symfony\Component\PasswordHasher\PasswordHasherInterface;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnCore\Domain\Service\Base\BaseCrudService;
-use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
+use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
 
 class PasswordHistoryService extends BaseCrudService implements PasswordHistoryServiceInterface
 {

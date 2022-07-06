@@ -5,7 +5,7 @@ namespace ZnUser\Password\Rpc\Controllers;
 use ZnUser\Password\Domain\Forms\CreatePasswordForm;
 use ZnUser\Password\Domain\Forms\RequestActivationCodeForm;
 use ZnUser\Password\Domain\Interfaces\Services\RestorePasswordServiceInterface;
-use ZnCore\Domain\Entity\Helpers\EntityHelper;
+use ZnCore\Entity\Helpers\EntityHelper;
 use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
 use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
 

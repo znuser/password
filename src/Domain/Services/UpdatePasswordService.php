@@ -10,8 +10,8 @@ use ZnCore\Contract\User\Exceptions\UnauthorizedException;
 use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnLib\Components\I18Next\Facades\I18Next;
-use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
-use ZnCore\Base\Validation\Helpers\ValidationHelper;
+use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Validation\Helpers\ValidationHelper;
 
 class UpdatePasswordService implements UpdatePasswordServiceInterface
 {

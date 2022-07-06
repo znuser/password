@@ -4,9 +4,9 @@ namespace ZnUser\Password\Domain\Interfaces\Services;
 
 use ZnUser\Password\Domain\Forms\CreatePasswordForm;
 use ZnUser\Password\Domain\Forms\RequestActivationCodeForm;
-use ZnCore\Domain\Entity\Exceptions\AlreadyExistsException;
-use ZnCore\Domain\Entity\Exceptions\NotFoundException;
-use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Entity\Exceptions\AlreadyExistsException;
+use ZnCore\Entity\Exceptions\NotFoundException;
+use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
 
 interface RestorePasswordServiceInterface
 {

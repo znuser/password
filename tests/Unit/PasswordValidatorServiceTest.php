@@ -3,11 +3,11 @@
 namespace ZnUser\Password\Tests\Unit;
 
 use ZnLib\Components\I18Next\Facades\I18Next;
-use ZnCore\Base\Validation\Helpers\ErrorCollectionHelper;
+use ZnCore\Validation\Helpers\ErrorCollectionHelper;
 use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface;
 use ZnCore\Base\Instance\Helpers\ClassHelper;
-use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
-use ZnCore\Base\Validation\Helpers\ValidationHelper;
+use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Validation\Helpers\ValidationHelper;
 use ZnTool\Test\Base\BaseTest;
 
 include_once __DIR__ . '/../bootstrap.php';

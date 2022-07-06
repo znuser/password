@@ -2,7 +2,7 @@
 
 namespace ZnUser\Password\Domain\Interfaces\Services;
 
-use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
 
 interface PasswordServiceInterface
 {
