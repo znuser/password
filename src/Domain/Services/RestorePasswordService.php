@@ -18,7 +18,7 @@ use ZnUser\Confirm\Domain\Interfaces\Services\ConfirmServiceInterface;
 use ZnLib\Components\Time\Enums\TimeEnum;
 use ZnCore\Entity\Exceptions\AlreadyExistsException;
 use ZnCore\Entity\Exceptions\NotFoundException;
-use ZnLib\Components\I18Next\Facades\I18Next;
+use ZnLib\I18Next\Facades\I18Next;
 use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
 use ZnCore\Validation\Helpers\ValidationHelper;
 use ZnUser\Notify\Domain\Interfaces\Services\NotifyServiceInterface;
