@@ -2,7 +2,7 @@
 
 namespace ZnUser\Password\Domain\Interfaces\Services;
 
-use ZnCore\Service\Interfaces\CrudServiceInterface;
+use ZnDomain\Service\Interfaces\CrudServiceInterface;
 
 interface PasswordBlacklistServiceInterface extends CrudServiceInterface
 {

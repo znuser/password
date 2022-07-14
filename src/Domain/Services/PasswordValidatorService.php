@@ -8,10 +8,10 @@ use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 use ZnLib\I18Next\Facades\I18Next;
-use ZnCore\Service\Base\BaseService;
+use ZnDomain\Service\Base\BaseService;
 use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
 use ZnCore\Validation\Helpers\ValidationHelper;
-use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
+use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
 
 class PasswordValidatorService extends BaseService implements PasswordValidatorServiceInterface
 {
