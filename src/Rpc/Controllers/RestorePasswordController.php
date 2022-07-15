@@ -2,12 +2,12 @@
 
 namespace ZnUser\Password\Rpc\Controllers;
 
+use ZnCore\Code\Helpers\PropertyHelper;
+use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
+use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
 use ZnUser\Password\Domain\Forms\CreatePasswordForm;
 use ZnUser\Password\Domain\Forms\RequestActivationCodeForm;
 use ZnUser\Password\Domain\Interfaces\Services\RestorePasswordServiceInterface;
-use ZnDomain\Entity\Helpers\EntityHelper;
-use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
-use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
 
 class RestorePasswordController
 {
@@ -22,7 +22,7 @@ class RestorePasswordController
     public function requestActivationCode(RpcRequestEntity $requestEntity): RpcResponseEntity
     {
         $form = new RequestActivationCodeForm();
-        EntityHelper::setAttributes($form, $requestEntity->getParams());
+        PropertyHelper::setAttributes($form, $requestEntity->getParams());
         $this->service->requestActivationCode($form);
         $response = new RpcResponseEntity();
         return $response;
@@ -31,7 +31,7 @@ class RestorePasswordController
     public function createPassword(RpcRequestEntity $requestEntity): RpcResponseEntity
     {
         $form = new CreatePasswordForm();
-        EntityHelper::setAttributes($form, $requestEntity->getParams());
+        PropertyHelper::setAttributes($form, $requestEntity->getParams());
         $this->service->createPassword($form);
         $response = new RpcResponseEntity();
         return $response;

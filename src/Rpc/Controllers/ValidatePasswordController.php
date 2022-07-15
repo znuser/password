@@ -2,14 +2,12 @@
 
 namespace ZnUser\Password\Rpc\Controllers;
 
-use ZnUser\Password\Domain\Entities\PasswordValidatorEntity;
-use ZnUser\Password\Domain\Entities\ValidatorEntity;
-use ZnUser\Password\Domain\Forms\UpdatePasswordForm;
-use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface;
-use ZnUser\Password\Domain\Interfaces\Services\UpdatePasswordServiceInterface;
-use ZnDomain\Entity\Helpers\EntityHelper;
+use ZnCore\Code\Helpers\PropertyHelper;
 use ZnLib\Rpc\Domain\Entities\RpcRequestEntity;
 use ZnLib\Rpc\Domain\Entities\RpcResponseEntity;
+use ZnUser\Password\Domain\Entities\PasswordValidatorEntity;
+use ZnUser\Password\Domain\Entities\ValidatorEntity;
+use ZnUser\Password\Domain\Interfaces\Services\PasswordValidatorServiceInterface;
 
 class ValidatePasswordController
 {
@@ -24,7 +22,7 @@ class ValidatePasswordController
     public function validate(RpcRequestEntity $requestEntity): RpcResponseEntity
     {
         $form = new PasswordValidatorEntity();
-        EntityHelper::setAttributes($form, $requestEntity->getParams());
+        PropertyHelper::setAttributes($form, $requestEntity->getParams());
         $this->service->validateEntity($form);
         $response = new RpcResponseEntity();
         return $response;
