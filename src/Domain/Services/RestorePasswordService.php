@@ -17,7 +17,7 @@ use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInt
 use ZnUser\Confirm\Domain\Interfaces\Services\ConfirmServiceInterface;
 use ZnLib\Components\Time\Enums\TimeEnum;
 use ZnDomain\Entity\Exceptions\AlreadyExistsException;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 use ZnLib\I18Next\Facades\I18Next;
 use ZnDomain\Validator\Exceptions\UnprocessibleEntityException;
 use ZnDomain\Validator\Helpers\ValidationHelper;
