@@ -13,7 +13,7 @@ use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInt
 use ZnCore\EventDispatcher\Traits\EventDispatcherTrait;
 use ZnLib\I18Next\Facades\I18Next;
 use ZnDomain\Service\Base\BaseService;
-use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
+use ZnDomain\Validator\Exceptions\UnprocessibleEntityException;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
 
 class PasswordService extends BaseService implements PasswordServiceInterface
