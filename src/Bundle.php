@@ -21,6 +21,13 @@ class Bundle extends BaseBundle
         ];
     }
 
+    public function rbac(): array
+    {
+        return [
+            __DIR__ . '/Rpc/config/rbac.php',
+        ];
+    }
+
     public function symfonyWeb(): array
     {
         return [
