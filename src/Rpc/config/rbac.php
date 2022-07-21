@@ -16,7 +16,6 @@ return [
             SecurityPermissionEnum::RESTORE_PASSWORD_CREATE_PASSWORD,
         ],
         SystemRoleEnum::USER => [
-            SystemRoleEnum::GUEST,
             SecurityPermissionEnum::UPDATE_PASSWORD_UPDATE,
         ],
     ],
